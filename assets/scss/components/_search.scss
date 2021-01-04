@@ -1,0 +1,35 @@
+.search-bar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+  background: #ffffff;
+  color: $deep-gray;
+  padding-left: 10px;
+  overflow: hidden;
+
+  @include focus-shadow;
+}
+
+.search-bar--icon {
+  padding: 10px;
+  align-items: center;
+  &.unicon {
+    display: flex;
+  }
+}
+
+.search-bar--field {
+  outline: none;
+  border: none;
+  display: block;
+  flex: 1 1 0%;
+  padding: 15px 10px;
+  color: $deep-gray;
+  font-size: 1.15rem;
+
+  &::placeholder {
+    color: $dark-gray;
+  }
+}

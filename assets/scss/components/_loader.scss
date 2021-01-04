@@ -1,0 +1,14 @@
+.loader--placeholder {
+  padding: 6px;
+  border-radius: 4px;
+  &__1 {
+    width: 90px;
+    background: $mid-gray;
+    margin-bottom: 10px;
+  }
+
+  &__2 {
+    width: 60px;
+    background: $mid-gray;
+  }
+}
