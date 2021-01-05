@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Unicon from 'vue-unicons/dist/vue-unicons-ssr.common.js'
-import { uniSearch } from 'vue-unicons/src/icons'
+import { uniSearch, uniTimes } from 'vue-unicons/src/icons'
 import 'vue-unicons/dist/vue-unicons-ssr.css'
 
-Unicon.add([uniSearch])
+Unicon.add([uniSearch, uniTimes])
 Vue.use(Unicon)

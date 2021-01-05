@@ -17,8 +17,14 @@
   overflow: hidden;
   border-radius: 10px;
   background: $bright-gray;
+
+  // select result items that aren't loading
+  &:not(.loading) {
+    cursor: pointer;
+  }
+
   @include for-phone-only {
-    grid-row-end: span 5;
+    grid-row-end: span 5 !important;
   }
 }
 
@@ -29,13 +35,40 @@
 }
 
 .result--item__image {
+  width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 1.2s;
 }
 
+.result--item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.04),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.95)
+  );
+}
+
 .result--item__info {
   position: absolute;
+  color: #ffffff;
   bottom: 25px;
   left: 25px;
+  padding-right: 25px;
+}
+
+.result--item__info__name {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.result--item__info__location {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: $light-gray;
 }

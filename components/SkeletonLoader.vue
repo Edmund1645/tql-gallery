@@ -3,7 +3,7 @@
     <div
       v-for="result in 6"
       :key="result"
-      class="result--item"
+      class="result--item loading"
       :style="`grid-row-end: span ${generateSpan()};`"
     >
       <div class="result--item__info">
